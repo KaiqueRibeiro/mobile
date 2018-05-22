@@ -1,0 +1,29 @@
+page-set-curso2 {
+
+    DIV.preferences-style h1{
+        color: #3db7ff ;
+    }
+    DIV.preferences-style h2{
+        color: #b2b2b2 ;
+    }
+    DIV.preferences-style h3{
+        color: #3db7ff ;
+    }
+    .image-info-size{
+        display: block;
+        margin: auto;
+        width: 250px;
+    }
+    .width_input{
+        width: 250px;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .largura{
+        min-width: 180px !important;
+        max-width: 180px !important;
+    }
+}

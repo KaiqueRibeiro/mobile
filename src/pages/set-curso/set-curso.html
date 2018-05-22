@@ -1,0 +1,27 @@
+<ion-content padding>
+
+  <ion-slides id="proc1">
+    <ion-slide>
+      <div class="preferences-style">
+        <h1>
+          <ion-icon name="ios-alarm"></ion-icon>&nbsp; &nbsp; Meu turno</h1>
+      </div>
+      <font color="#b2b2b2" size="2" align="left">
+        <p align="center">Para personalizarmos seu ambiente precisamos que você selecione o
+          <b>turno</b> do seu curso:</p>
+      </font>
+      <br>
+      <ion-card (click)="defineTurno('Matiturno')">
+        <button id="Matiturno" ion-button clear clas="width_input">Manhã</button>
+      </ion-card>
+      <ion-card (click)="defineTurno('Noturno')">
+        <button id="Noturno" ion-button clear clas="width_input">Noite</button>
+      </ion-card>
+
+      <br><br>
+        <font color="#3db7ff" size="2" (click)="ajuda()">Ajuda</font>
+
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <div>
+      <br>
+      <br>
+      <h1>
+        <b>&nbsp; &nbsp; &nbsp; Locais</b>
+      </h1>
+      <font color="#3db7ff" size="2" align="left">
+        <p align="left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UniInfo</p>
+      </font>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div>
+    <br>
+    <font color="#b2b2b2" size="2" align="center">
+      <p align="center">Toque para mais detalhes:</p>
+    </font>
+    <br>
+  </div>
+
+
+  <ion-card *ngFor="let local of places | async" (click)="verLocal(local.ambiente, local.localizacao, local.descricao, local.horario)">
+      <ion-card-title>
+        <ion-item>
+          <ion-icon name="ios-compass" color="primary" item-start>
+          </ion-icon>  
+          <font color="#3db7ff" size="3" align="left">
+            {{local.ambiente}}
+            </font>
+            <font color="#b2b2b2" size="0,5" align="right">
+                <br><b>Bloco:</b> {{local.localizacao}}
+                <br><b>Horário:</b> {{local.horario}}
+              </font>         
+        </ion-item>
+      </ion-card-title>
+    </ion-card>
+
+</ion-content>

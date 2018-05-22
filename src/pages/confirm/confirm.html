@@ -1,0 +1,55 @@
+<ion-content padding>
+  <ion-slides id="proc1">
+    <ion-slide>
+      <div class="preferences-style">
+        <h1>
+          <ion-icon name="ios-cafe"></ion-icon>&nbsp; &nbsp; Boas vindas!</h1>
+      </div>
+      <font color="#b2b2b2" size="2" align="left">
+        <p align="center">Agora confirme as informações abaixo para poder usar nossa interface personalizada para você!
+          <br>
+        </p>
+      </font>
+      <ion-card>
+        <ion-card-title>
+          <ion-item>
+            <ion-icon name="ios-alarm" color="primary" item-start>
+            </ion-icon>
+            <h2>{{providerPreferences.myTurno}}</h2>
+          </ion-item>
+        </ion-card-title>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-title>
+          <ion-item>
+            <ion-icon name="ios-book" color="primary" item-start>
+            </ion-icon>
+            <h2>{{providerPreferences.myCurso}}</h2>
+          </ion-item>
+        </ion-card-title>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-title>
+          <ion-item>
+            <ion-icon name="logo-buffer" color="primary" item-start>
+            </ion-icon>
+            <h2>{{providerPreferences.mySemestre}}° Semestre</h2>
+          </ion-item>
+        </ion-card-title>
+      </ion-card>
+
+
+      <br>
+         
+        <button ion-button id="next" (click)="next()">
+          Tudo certo! &nbsp; &nbsp;
+          <ion-icon name="ios-arrow-dropright"></ion-icon>
+        </button>
+<br><br>
+        <font color="#3db7ff" size="2" (click)="Corrige()">Voltar e corrigir.</font>
+
+    </ion-slide>
+  </ion-slides>
+</ion-content>

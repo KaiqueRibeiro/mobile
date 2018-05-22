@@ -1,0 +1,49 @@
+<ion-content padding>
+
+  <ion-slides id="proc1">
+    <ion-slide>
+      <div class="preferences-style">
+        <h1>
+          <ion-icon name="logo-buffer"></ion-icon>&nbsp; &nbsp; Meu semestre</h1>
+      </div>
+      <font color="#b2b2b2" size="2" align="left">
+        <p align="center">Por fim... Seu
+          <b>semestre</b>:
+          <br>
+          <br>
+        </p>
+      </font>
+      <br>
+      <ion-item>
+        <ion-label>
+          <font color="#b2b2b2" size="2" align="left">
+            <p align="left">Estou no:</p>
+          </font>
+        </ion-label>
+        <ion-select cancelText="Fechar" okText="Pronto" class='largura'>
+          <div *ngFor="let curso of courses | async">
+            <ion-option *ngIf="curso.turno === providerPreferences.myTurno && curso.curso === providerPreferences.myCurso" (ionSelect)="ready(curso.semestre)">{{curso.semestre}}° Semestre</ion-option>
+          </div>
+        </ion-select>
+      </ion-item>
+      <br>
+      <br>
+      <button ion-button id="next" (click)="next()">
+        Próximo &nbsp; &nbsp;
+        <ion-icon name="ios-arrow-dropright"></ion-icon>
+      </button>
+      <br>
+      <br>
+      <font color="#3db7ff" size="2" (click)="ajuda()">Ajuda</font>
+      <br>
+      <br>
+      <font color="#b2b2b2" size="1" align="left">
+        <p>
+          <b>*Caso seu semestre não esteja na lista, entre em contato com a secretaria de seu Campus.</b>
+        </p>
+      </font>
+
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

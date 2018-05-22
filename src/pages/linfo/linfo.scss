@@ -1,0 +1,16 @@
+page-linfo {
+
+    DIV.align_center {
+        height: 70%;
+        position: relative;
+    }
+
+    DIV.align_center h1 {
+        position: absolute;
+        color: #3db7ff ;
+        top: 60%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+}

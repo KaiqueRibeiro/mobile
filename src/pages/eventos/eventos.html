@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <div>
+      <br>
+      <br>
+      <h1>
+        <b>&nbsp; &nbsp; &nbsp; Eventos</b>
+      </h1>
+      <font color="#3db7ff" size="2" align="left">
+        <p align="left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; UniInfo</p>
+      </font>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div>
+    <br>
+    <font color="#b2b2b2" size="2" align="center">
+      <p align="center">Fique por dentro do que está acontecendo pelo campus:</p>
+    </font>
+    <br>
+  </div>
+
+  <ion-card *ngFor="let evento of events | async">
+    <ion-card-title>
+      <ion-item>
+        <ion-icon name="ios-quote" color="primary" item-start>
+        </ion-icon>
+        <font color="#3db7ff" size="3" align="left">
+          {{evento.titulo}}
+        </font>
+        <ion-card-content style="white-space: normal;">
+            <font color="#b2b2b2" size="0,5" align="right">
+                <br>{{evento.descricao}}
+              </font>
+          </ion-card-content>        
+        <font color="#b2b2b2" size="0,5" align="right">
+          <br>
+          <b>Local:</b> {{evento.local}}
+          <br>
+          <b>Data:</b> {{evento.data}}
+        </font>
+      </ion-item>
+    </ion-card-title>
+  </ion-card>
+
+
+  <font color="#b2b2b2" font-size="3pt">
+    <p align="right">Powered by UniInfo.</p>
+  </font>
+
+</ion-content>

@@ -1,0 +1,9 @@
+{
+  "name": "UniInfo_3",
+  "app_id": "d9794dae",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "hooks": {}
+}

@@ -1,0 +1,51 @@
+<ion-header>
+    <div>
+      <br>
+      <br>
+      <h1>
+        <b>&nbsp; &nbsp; &nbsp; Resultado</b>
+      </h1>
+      <font color="#3db7ff" size="2" align="left">
+        <p align="left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cursos > Consulta Rápida > Busca por filtro</p>
+      </font>
+    </div>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div>
+    <br>
+    <font color="#b2b2b2" size="2" align="center">
+      <p align="center">Aqui está o resultado para sua pesquisa:</p>
+    </font>
+  </div>
+
+  <ion-card>
+    <ion-card-title>
+      <ion-item>
+        <ion-icon name="ios-bookmarks" color="primary" item-start>
+        </ion-icon>
+
+        <div *ngFor="let curso of courses | async">
+          <font color="#3db7ff" size="3" align="left" *ngIf="curso.turno === providerPreferences.moreTurno && curso.curso === providerPreferences.moreCurso && curso.semestre === providerPreferences.moreSemestre">
+            Sala: H-45
+          </font>
+        </div>
+        <font color="#b2b2b2" size="0,5" align="left">
+          {{providerPreferences.moreCurso}}
+          <br>{{providerPreferences.moreSemestre}}° Semestre
+          <br>{{providerPreferences.moreTurno}}
+        </font>
+      </ion-item>
+    </ion-card-title>
+  </ion-card>
+
+  <div align="center">
+  <button ion-button (click)="goToHome()">
+    Voltar para o início &nbsp; &nbsp;
+    <ion-icon name="ios-school-outline"></ion-icon>
+  </button>
+</div>
+
+</ion-content>

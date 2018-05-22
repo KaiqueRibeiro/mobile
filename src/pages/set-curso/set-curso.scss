@@ -1,0 +1,22 @@
+page-set-curso {
+
+    DIV.preferences-style h1{
+        color: #3db7ff ;
+    }
+    DIV.preferences-style h2{
+        color: #3db7ff ;
+    }
+    .image-info-size{
+        display: block;
+        margin: auto;
+        width: 250px;
+    }
+    .width_input{
+        width: 250px;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    
+}

@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar>
+  <div>
+    <br>
+    <br>
+    <h1>
+      <b>&nbsp; &nbsp; &nbsp; Consulta Rápida</b>
+    </h1>
+    <font color="#3db7ff" size="2" align="left">
+      <p align="left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cursos > Consulta Rápida</p>
+    </font>
+  </div>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    
+  <div>
+    <font color="#b2b2b2" size="2" align="center">
+      <p align="center">Consulta de localização de salas para outros cursos.</p>
+    </font>
+  </div>
+
+  <ion-card>
+    <ion-card-title>
+      <ion-item>
+        <ion-icon name="ios-search" color="primary" item-start>
+        </ion-icon>
+
+        <font color="#3db7ff" size="3" align="left">
+          Busca por filto
+        </font>
+        <font color="#b2b2b2" size="0,5" align="right">
+          <br>Turno | Curso | Semestre
+        </font>
+      </ion-item>
+    </ion-card-title>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>
+        <font color="#b2b2b2" size="2" align="left">
+          <p align="left">* Turno:</p>
+        </font>
+      </ion-label>
+      <ion-select cancelText="Fechar" okText="Pronto" class='largura' disabled="{{isEnable1}}">
+        <ion-option (ionSelect)="proc1('Matiturno')">Matiturno</ion-option>
+        <ion-option (ionSelect)="proc1('Noturno')">Noturno</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <font color="#b2b2b2" size="2" align="left">
+          <p align="left">* Curso:</p>
+        </font>
+      </ion-label>
+      <ion-select cancelText="Fechar" okText="Pronto" class='largura' disabled="{{isEnable2}}">
+        <div *ngFor="let curso of courses | async">
+          <ion-option *ngIf="curso.turno === providerPreferences.moreTurno && curso.semestre === '1'" (ionSelect)="proc2(curso.curso)">{{curso.curso}}</ion-option>
+        </div>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <font color="#b2b2b2" size="2" align="left">
+          <p align="left">* Semestre:</p>
+        </font>
+      </ion-label>
+      <ion-select cancelText="Fechar" okText="Pronto" class='largura' disabled="{{isEnable3}}">
+        <div *ngFor="let curso of courses | async">
+          <ion-option *ngIf="curso.turno === providerPreferences.moreTurno && curso.curso === providerPreferences.moreCurso" (ionSelect)="proc3(curso.semestre)">{{curso.semestre}}</ion-option>
+        </div>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+
+  <font color="#b2b2b2" size="0,5" align="center">
+      <p align="center">
+        Campos com (*) são de preenchimento obrigatório.
+      </p>
+    </font>
+
+  <div align="center">
+    <button ion-button id="next" (click)="next()">
+      Ver sala &nbsp; &nbsp;
+      <ion-icon name="ios-navigate-outline"></ion-icon>
+    </button>
+    <br>
+    <br>
+    <font color="#3db7ff" size="2" (click)="corrige()">Corrigir</font>
+  </div>
+
+</ion-content>
