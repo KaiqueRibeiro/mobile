@@ -29,7 +29,7 @@
 
         <div *ngFor="let curso of courses | async">
           <font color="#3db7ff" size="3" align="left" *ngIf="curso.turno === providerPreferences.moreTurno && curso.curso === providerPreferences.moreCurso && curso.semestre === providerPreferences.moreSemestre">
-            Sala: H-45
+            {{curso.sseg}}
           </font>
         </div>
         <font color="#b2b2b2" size="0,5" align="left">

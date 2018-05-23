@@ -42,7 +42,7 @@ export class SetCurso2Page {
   }
 
   next() {
-    if (this.providerPreferences.myCurso != undefined) {
+    if (this.providerPreferences.myCurso != '0') {
       this.navCtrl.push('SetCurso3Page')
     } else {
       this.toast.create({ message: 'Por favor, selecione um curso.', duration: 3000 }).present();

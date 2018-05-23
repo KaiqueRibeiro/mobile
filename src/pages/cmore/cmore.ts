@@ -33,7 +33,7 @@ export class CmorePage {
     this.providerPreferences.moreCurso = '0';
     this.providerPreferences.moreSemestre = '0';
 
-    this.navCtrl.push(CursosPage)
+    this.navCtrl.push('CursosPage')
     .then(()=>{
       this.viewCtrl.dismiss();
     });

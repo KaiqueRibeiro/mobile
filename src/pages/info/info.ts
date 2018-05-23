@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, App } from 'ionic-angular';
 
 import { GlobalPreferencesVar } from '../../providers/global_var/preferencias';
 
@@ -16,6 +16,7 @@ export class InfoPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private viewCtrl: ViewController,
+    public app: App,
     private providerPreferences: GlobalPreferencesVar) {
 
   }
@@ -29,10 +30,7 @@ export class InfoPage {
     this.providerPreferences.myCurso = '0';
     this.providerPreferences.mySemestre = '0';
 
-    this.navCtrl.push(SetCursoPage)
-    .then(()=>{
-      this.viewCtrl.dismiss();
-    });
+    this.app.getRootNav().setRoot(SetCursoPage);
   }
 
 }

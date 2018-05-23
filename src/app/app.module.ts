@@ -17,6 +17,7 @@ import { EventosPage } from '../pages/eventos/eventos';
 import { EventosPageModule } from '../pages/eventos/eventos.module';
 
 import { CursosPage } from '../pages/cursos/cursos';
+import { CursosPageModule } from '../pages/cursos/cursos.module';
 import { CinfoPage } from '../pages/cinfo/cinfo';
 import { CinfoPageModule } from '../pages/cinfo/cinfo.module';
 import { CmorePage } from '../pages/cmore/cmore';
@@ -90,7 +91,6 @@ import { ConfirmPageModule } from '../pages/confirm/confirm.module';
     MyApp,
 
     InfoPage,
-    CursosPage,
     CmorePage,
 
     TabsPage
@@ -111,6 +111,8 @@ import { ConfirmPageModule } from '../pages/confirm/confirm.module';
 
     CinfoPageModule,
     LinfoPageModule,
+
+    CursosPageModule,
 
     StartPageModule,
     SetCursoPageModule,

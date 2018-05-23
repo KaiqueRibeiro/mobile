@@ -37,7 +37,7 @@ export class SetCurso3Page {
   }
 
   next() {
-    if (this.providerPreferences.mySemestre != undefined) {
+    if (this.providerPreferences.mySemestre != '0') {
       this.navCtrl.push('ConfirmPage');
     }else{
       this.toast.create({ message: 'Por favor, selecione um semestre.', duration: 3000 }).present();
